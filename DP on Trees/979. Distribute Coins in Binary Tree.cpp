@@ -9,6 +9,11 @@ here i'm augmenting the node's of a tree it's not a good practice to do so
 i'm thinking to update my solution without augmenting the tree 
 once i figure it out i'll update my soltion 
 thanks
+
+
+update1
+->what we can do is instead of augmenting nodes we can return from left and right subtree how many extra operation will they need 
+->to make their subtree good and adding that many operations to our answer will let us help figure out the correct answer for complete tree
 */
 
 
