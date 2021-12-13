@@ -2,6 +2,8 @@
 not very much to explain here as it's easy to think here we need to modify a bit of sub tree size and fit this 
 to get our answer 
 if anyone feel elaborated explaination i'm ready to clear this for you
+
+similar problem :- 1339. Maximum Product of Splitted Binary Tree
 */
 
 class Solution {
