@@ -55,46 +55,60 @@ public:
     }
 };
 
-int spf[100001];
-
-void sieve()
-{
-    spf[1] = 1;
-    
-    for (int i=2; i<100001; i++)
-        spf[i] = i;
- 
-    for (int i=4; i<100001; i+=2)
-        spf[i] = 2;
- 
-    for (int i=3; i*i<100001; i++)
+class primeFactorization{
+    vi spf;
+public:
+    primeFactorization(int n)
     {
-        if (spf[i] == i)
+        int i;
+        spf.resize(n);
+        
+        for(i=0;i<n;i++)
         {
-            for (int j=i*i; j<100001; j+=i)
-                if (spf[j]==j)
-                    spf[j] = i;
+            spf[i]=0;
         }
     }
-}
-
-vector<int> getFactorization(int x)
-{
-    vector<int> ret;
     
-    while (x != 1)
+    void sieve()
     {
-        ret.push_back(spf[x]);
-        x = x / spf[x];
+        spf[1] = 1;
+
+        for (int i=2; i<100001; i++)
+            spf[i] = i;
+
+        for (int i=4; i<100001; i+=2)
+            spf[i] = 2;
+
+        for (int i=3; i*i<100001; i++)
+        {
+            if (spf[i] == i)
+            {
+                for (int j=i*i; j<100001; j+=i)
+                    if (spf[j]==j)
+                        spf[j] = i;
+            }
+        }
     }
-    
-    return ret;
-}
+
+    vector<int> getFactorization(int x)
+    {
+        vector<int> ret;
+
+        while (x != 1)
+        {
+            ret.push_back(spf[x]);
+            x = x / spf[x];
+        }
+
+        return ret;
+    }
+};
 
 class Solution {
 public:
     bool gcdSort(vector<int>& nums) {
         union_find DSU(100001);
+        primeFactorization pf(100001);
         long long i,j,n=nums.size();
         vector<int> sorted;
         
@@ -104,11 +118,11 @@ public:
         
         sort(sorted.begin(),sorted.end());
         
-        sieve();
+        pf.sieve();
         
         for(auto &x:nums)
         {
-            vector<int> v=getFactorization(x);
+            vector<int> v=pf.getFactorization(x);
             for(auto &y:v)
             {
                 DSU.un(y,x);
