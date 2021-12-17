@@ -1,5 +1,8 @@
 /*
 similar to problem number 1998
+
+the alternative good way to solve this is to iterate over all the factors of number x and do union of (factor,x) and (x/factor,x)
+then we can keep track of count of root for all the numbers in a map and we can simply figure out the maximum among all
 */
 #define vi vector<int>
 
