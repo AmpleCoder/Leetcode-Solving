@@ -10,6 +10,9 @@
  * };
  */
 
+/*these solutions also contain how to fetch the path from root to any other node as well 
+in same order as well in opposite order*/
+
 /*
 if lca is source node then only up up (L,R) traversal
 if lca is destination node then only U traversal 
