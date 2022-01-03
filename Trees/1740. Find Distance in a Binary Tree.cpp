@@ -46,3 +46,7 @@ public:
         return d1+d2;
     }
 };
+
+/*
+follow up :- how to do it in one pass
+*/
