@@ -6,6 +6,8 @@ using iterative space can be reduced to O(1)
 to reduce time complexity we can use matrix exponentiation 
 how?we can create a 10*10 matrix with M[i][j]=1 (if i and j are connected) and ans=[1,1,1,1,1,1,1,1,1,1]*(M^(n-1))
 think more and try to imlement 
+
+https://medium.com/hackernoon/google-interview-questions-deconstructed-the-knights-dialer-f780d516f029
 */
 
 #define ll long long
