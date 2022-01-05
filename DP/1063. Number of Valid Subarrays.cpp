@@ -1,6 +1,9 @@
 /*
 nice problem here we need to use nsei and via which we can fetch the info of number of subarray's starting from i 
 which have a[i] as their smallest element
+
+follow up :- once get comfortable in RMQ sparse tables 
+try solving this using that via hints
 */
 
 class Solution {
