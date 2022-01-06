@@ -12,6 +12,12 @@
 good tree problem 
 here we need to tell all k node distances from a given node in tree 
 follow up : k node siblings 
+try discussing dfs solution as well 
+and which one is preferable? bfs or dfs?
+
+bfs idea is simple 
+we need to map the parents for every node then start doing bfs from target node and push all three unvisited nodes i.e parents , childs(left + right)
+and once reached k distance stop bfs and push all answer nodes
 */
 
 class Solution {
