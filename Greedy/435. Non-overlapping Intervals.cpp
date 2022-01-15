@@ -1,6 +1,9 @@
 /*
 in this problem we can figure out number max number of intervals which can be formed which are not overlapping 
 which will furthur give us min number of overlapping intervals to be removed to get all remaining non overlapping inteevals
+
+to have a upper edge
+also try this problem via dp + greedy from start points
 */
 
 class Solution {
