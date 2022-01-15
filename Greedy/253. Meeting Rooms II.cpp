@@ -7,6 +7,8 @@ to assign a room to this query asap hence for that we're keeping track of min. e
 
 here one thing i'm having doubt is in operator the operation which we are doing at a moment will give us the pq having 
 topmost ele having max finishing time then how is it working ?
+
+for the second method try to get more feel of it and code it once
 */
 
 #define pii pair<int,int>
