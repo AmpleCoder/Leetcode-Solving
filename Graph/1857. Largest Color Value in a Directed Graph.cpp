@@ -1,7 +1,9 @@
 /*
 here we need to tell the mvalue of max freq of any number in any directed path
 follow up : how to print the path
-it's a very good problem basically kinda tough 
+it's a very good problem basically kinda tough
+
+look at the code once i've solved on my own by using some hint
 */
 
 class Solution {
