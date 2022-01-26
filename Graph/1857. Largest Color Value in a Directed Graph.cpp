@@ -4,6 +4,8 @@ follow up : how to print the path
 it's a very good problem basically kinda tough
 
 look at the code once i've solved on my own by using some hint
+
+checking out other's solution is pending do it asap
 */
 
 class Solution {
