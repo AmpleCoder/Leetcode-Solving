@@ -3,6 +3,8 @@ here think like let f returns the optimal score which alice can score
 then bob's score = sum - f
 and in f while it's bob's turn he'll try to minimize alice score as much as possible 
 counterly alice will try to increase herscore as max as possible 
+
+ps: do checkout lee's solution he solved in O(1) space crazy af
 */
 
 class Solution {
