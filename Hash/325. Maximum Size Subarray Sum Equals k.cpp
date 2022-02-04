@@ -1,5 +1,9 @@
 /*
 similar to 525
+
+other variations 
+1)number of subarray's with sum=k
+2)number of subarray's with sum>=k
 */
 
 class Solution {
