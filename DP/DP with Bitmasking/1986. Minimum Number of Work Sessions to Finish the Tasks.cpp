@@ -8,6 +8,8 @@ follow up
 try to understand (https://cp-algorithms.com/algebra/all-submasks.html)
 and solve it in actually manner i.e dp with bitmask 
 this problem is all subsets of mask kinda 
+
+read this : https://leetcode.com/problems/minimum-number-of-work-sessions-to-finish-the-tasks/discuss/1432155/Easier-than-top-voted-ones-or-LegitClickbait-or-c%2B%2B
 */
 
 class Solution {
