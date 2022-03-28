@@ -2,6 +2,10 @@
 isme check krne wala step ki kon sa segment [low,mid] ya [mid,hi] wala sorted hei wo easy hei 
 bus ek case handle krna hei mid find krne ke phle hi wo saare lo aur high ko skip kr do jo duplicate hein 
 worst case mei O(n) to jayega hi jayega  
+
+follow ups
+1)freq of particular ele in O(logn) avg 
+2)indexes of particular ele in O(logn) avg
 */
 
 class Solution {
