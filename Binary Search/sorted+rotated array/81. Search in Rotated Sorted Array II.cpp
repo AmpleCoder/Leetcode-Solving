@@ -6,6 +6,7 @@ worst case mei O(n) to jayega hi jayega
 follow ups
 1)freq of particular ele in O(logn) avg 
 2)indexes of particular ele in O(logn) avg
+3)index of pivot eles
 */
 
 class Solution {
