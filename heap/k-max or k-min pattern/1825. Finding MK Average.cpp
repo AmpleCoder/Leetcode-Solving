@@ -2,6 +2,16 @@
 ek tareeka hei ki we can maintain a m size ka vector + 3 ordered multiset then jab tk vector bhar nhi jata tb tk values ko add krte 
 rahenge and jaise hi vector bhar jayega tb aapn us index ki value ko phle remove krenge(dhyan rahe ki wo 3 multiset bhi update krne pdenge)
 then value ko us index mei update krdenge in between which 3 multiset bhi update honge
+
+key take aways
+auto it=left.rbegin();
+left.erase(it)
+
+ye nhi chal raha 
+
+auto it=prev(end(left))
+left.erase(it)
+ye chal raha
 */
 
 class MKAverage {
