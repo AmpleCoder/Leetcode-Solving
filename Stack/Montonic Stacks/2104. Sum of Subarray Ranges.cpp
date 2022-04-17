@@ -1,5 +1,6 @@
 /*
 similar to sub-array's minimum
+checkout lee's solution to wrap things up in one single loop
 */
 
 class Solution {
