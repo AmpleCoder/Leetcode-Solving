@@ -1,5 +1,6 @@
 /*
 it's very simialr to what we did in min ele from all subarray sum
+discuss and take a look into top solution
 */
 
 class Solution {
