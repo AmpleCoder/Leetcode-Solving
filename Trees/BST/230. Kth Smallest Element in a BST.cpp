@@ -44,6 +44,13 @@ public:
 
 /*
 TC: O(Height)
+right solution but not efficient how?
+What you stored in TreeNodeWithCount is the order of its value, not the count of its children. So you will not achieve the target which takes O(logn) time when insert/delete a node or calculate the kth smallest element after.
+For example, if a number less than the min value of the BST inserted, you will have to change the order of all the nodes. This will cost O(n) time, not O(logn);
+
+do scenarios hein pharak kya pad raha hei 
+ek me mei bas left subtree ka count rakh raha hu 
+dusre me mei complete tree ka count rakh raha hu 
 */
 
 class TreeNodeWithCount {
