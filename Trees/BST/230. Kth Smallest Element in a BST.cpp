@@ -41,3 +41,44 @@ public:
         }
     }
 };
+
+/*
+TC: O(Height)
+*/
+
+class TreeNodeWithCount {
+public:
+    int val;
+    int count;
+    TreeNodeWithCount* left;
+    TreeNodeWithCount* right;
+    TreeNodeWithCount(int x) {val = x; count = 1;left=NULL;right=NULL;}
+};
+
+class Solution {
+public:
+    TreeNodeWithCount* buildTreeWithCount(TreeNode* root,int& n) {
+        if (!root) return NULL;
+        TreeNodeWithCount* rootWithCount = new TreeNodeWithCount(root->val);
+        rootWithCount->left = buildTreeWithCount(root->left,n);
+        rootWithCount->count = n++;
+        rootWithCount->right = buildTreeWithCount(root->right,n);
+        return rootWithCount;
+    }
+ 
+    int kthSmallest(TreeNodeWithCount* rootWithCount, int k) {
+        if (rootWithCount->count > k) 
+            return kthSmallest(rootWithCount->left, k);
+        else if (rootWithCount->count == k) 
+            return rootWithCount->val;
+        else
+            return kthSmallest(rootWithCount->right, k);
+    }
+ 
+     
+    int kthSmallest(TreeNode* root, int k) {
+		int n = 1;
+        TreeNodeWithCount* rootWithCount = buildTreeWithCount(root,n);
+        return kthSmallest(rootWithCount, k);
+    }
+};
