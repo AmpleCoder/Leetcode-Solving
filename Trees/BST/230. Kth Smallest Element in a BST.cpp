@@ -51,6 +51,9 @@ For example, if a number less than the min value of the BST inserted, you will h
 do scenarios hein pharak kya pad raha hei 
 ek me mei bas left subtree ka count rakh raha hu 
 dusre me mei complete tree ka count rakh raha hu 
+
+to maintain complexity while insertion/deletion upto O(height) do this
+ https://leetcode.com/problems/kth-smallest-element-in-a-bst/discuss/63659/What-if-you-could-modify-the-BST-node's-structure
 */
 
 class TreeNodeWithCount {
