@@ -1,3 +1,15 @@
+/*
+Some of the questions which can be asked to the interviewer before implementing the solution
+
+For simplicity, are the keys integers only?
+For collision resolution, can we use chaining?
+Do we have to worry about load factors?
+Can we assume inputs are valid or do we have to validate them?
+Can we assume this fits memory?
+
+ps : iska modulo wala solution seekho
+*/
+
 class MyHashMap {
 public:
     int hash[1000001];
