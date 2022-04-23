@@ -32,6 +32,19 @@ public:
 /*
 most proper way to do this 
 note: if in a constructor we don't use srand(time(0)) then result for other string will be same (why?)
+
+Performance Analysis
+
+The number of URLs that can be encoded is quite large in this case, nearly of the order (10+26)^6 
+
+The length of the encoded URLs is fixed to 6 units, which is a significant reduction for very large URLs.
+
+The performance of this scheme is quite good, due to a very less probability of repeated same codes generated.
+
+We can increase the number of encodings possible as well, by increasing the length of the encoded strings. Thus, there exists a tradeoff between the length of the code and the number of encodings possible.
+
+Predicting the encoding isn't possible in this scheme since random numbers are used.
+
 */
 
 class Solution {
