@@ -1,3 +1,7 @@
+/*
+isko prim's se bhi kar skte hein wo dekho 
+*/
+
 #define vi vector<int>
 
 class union_find{
