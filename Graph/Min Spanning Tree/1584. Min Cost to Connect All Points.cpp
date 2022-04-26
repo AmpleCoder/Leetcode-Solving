@@ -1,5 +1,6 @@
 /*
-isko prim's se bhi kar skte hein wo dekho 
+isko prim's se bhi kar skte hein wo dekho
+note :  vector<array<int, 3>> arr; use this instead of vector<vetor<int>> 
 */
 
 #define vi vector<int>
