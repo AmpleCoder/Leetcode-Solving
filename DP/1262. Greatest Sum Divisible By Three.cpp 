@@ -1,0 +1,29 @@
+class Solution {
+public:
+    int maxSumDivThree(vector<int> &nums, int dp[10001][3], int currIndex, int currSumMod3, int size){
+        if(currIndex == size){
+            if(currSumMod3 == 0){
+                return 0;
+            }
+
+            return INT_MIN;
+        }
+
+        if(dp[currIndex][currSumMod3] != -1){
+            return dp[currIndex][currSumMod3];
+        }
+
+        int takeIt,notTakeIt;
+        takeIt = nums[currIndex] + maxSumDivThree(nums, dp, currIndex+1, (currSumMod3+nums[currIndex])%3, size);
+        notTakeIt = maxSumDivThree(nums, dp, currIndex+1, currSumMod3, size);
+        
+        return dp[currIndex][currSumMod3] = max(takeIt, notTakeIt);
+    }
+
+    int maxSumDivThree(vector<int>& nums) {
+        int currSumMod3=0,size=nums.size();
+        int dp[40001][3];
+        memset(dp,-1,sizeof(dp));
+        return maxSumDivThree(nums,dp,0,currSumMod3,size);
+    }
+};
