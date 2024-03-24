@@ -1,3 +1,10 @@
+/*
+    follow ups:
+    1) number of ways to partition the binary array so that every part will be having a sum = k
+    2) number of ways to partition the array so that every part will be having a equal sum
+    3) number of ways to partition the array so that every part will be having a sum = k
+*/
+
 class Solution {
 public:
     int numberOfGoodSubarraySplits(vector<int>& nums) {
