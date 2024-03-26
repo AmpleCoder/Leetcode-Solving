@@ -1,4 +1,3 @@
-```
 class Solution {
 public:
     int minimumDeletions(string s) {
@@ -23,4 +22,3 @@ public:
         return minDeletion;
     }
 };
-```
