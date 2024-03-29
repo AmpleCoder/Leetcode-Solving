@@ -1,6 +1,11 @@
 /*
     solving this via iterative dp is easier as it leads to more sense to define it this way
     dp[i][j] = maximum length common sub-array ending at a[i] and b[j]
+
+    TODO: 
+        1) Polynomial rolling hash Solution
+        2) KMP 
+        ye 2 methods dekhna hei
 */
 
 class Solution {
