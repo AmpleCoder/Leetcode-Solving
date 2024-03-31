@@ -1,8 +1,8 @@
 /*
     approach1 :- 
         as we know if in a subarray the diff between the max and min val is <= limit then each and every pair will 
-        satisfy the same condition hence we can use multiset to store to fetch the max and min and keep on popping ele 
-        which are of no use for use from start 
+        satisfy the same condition hence we can use multiset to store and fetch the max and min and keep on popping ele 
+        which are of no use for us from start 
 */
 
 class Solution {
