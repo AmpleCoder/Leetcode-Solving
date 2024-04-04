@@ -1,5 +1,5 @@
 /*
-this is one of the intuitive problem where before solving this we need to have a deep understanding of where things might went wrong
+this is one of the intuitive problem where before solving this we need to have a deep understanding of where things might go wrong
 (if we delete certain node which is to be deleted whoses level is lesser than the other to be deleted)
 so folowing this we can simple maintain the levels of the nodes and after that we can sort the nodes on the basis of decreasing levels
 of nodes to be deleted then after that we can maintains parents of each nodes after that and after that things are pretty simple only case we 
@@ -88,5 +88,86 @@ public:
         }
         
         return ans;
+    }
+};
+
+/*
+    approach 2:
+        for each node set kr diya parent ko then uske bad we've to delete this node for that before deleting this node 
+        2 things we've to do 
+            1) set parent of it's left and right child to NULL if they exist
+            2) set curr nodes parent's left if this node is left child or right to null
+
+        then delete this node
+*/
+class Solution {
+public:
+    void setParent(unordered_map<TreeNode*, TreeNode*>  &parentMap, TreeNode* currNode, TreeNode* parent){
+        if(currNode == NULL){
+            return;
+        }
+
+        parentMap[currNode] = parent;
+        setParent(parentMap, currNode->left, currNode);
+        setParent(parentMap, currNode->right, currNode);
+    }
+
+    void setValueToNodeMap(unordered_map<int, TreeNode*> &valueToNodeMap, unordered_map<TreeNode*, TreeNode*> &parentMap){
+        for(auto currMapElement: parentMap){
+            TreeNode* currNode = currMapElement.first;
+            int currValue = currNode->val;
+            valueToNodeMap[currValue] = currNode;
+        }
+    }
+
+    vector<TreeNode*> delNodes(TreeNode* root, vector<int>& to_delete) {
+        unordered_map<TreeNode*, TreeNode*> parentMap;
+        unordered_map<int, TreeNode*> valueToNodeMap;
+        setParent(parentMap, root, NULL);
+        setValueToNodeMap(valueToNodeMap, parentMap);
+        vector<TreeNode*> forest;
+
+        for(int currNodeValue: to_delete){
+            TreeNode *currNode = valueToNodeMap[currNodeValue];
+            TreeNode *currParent = parentMap[currNode];
+            TreeNode *leftChild = currNode->left;
+            TreeNode *rightChild = currNode->right;
+
+            
+            //if curr node par exist 
+            if(currParent != NULL){
+                //if node to be deleted is left child 
+                if(currParent->left != NULL && currParent->left->val == currNodeValue){
+                    currParent->left = NULL;
+                }
+
+                //if node to be deleted is right child 
+                if(currParent->right != NULL && currParent->right->val == currNodeValue){
+                    currParent->right = NULL;
+                }
+            }
+
+            if(leftChild != NULL){
+                parentMap[leftChild] = NULL;
+            }
+            
+            if(rightChild != NULL){
+                parentMap[rightChild] = NULL;
+            }
+
+            //delete the node
+            parentMap.erase(currNode);
+        }
+
+        for(auto currParentMapNode: parentMap){
+            TreeNode *currNode = currParentMapNode.first;
+            TreeNode *parentNode = currParentMapNode.second;
+
+            if(parentNode == NULL){
+                forest.push_back(currNode);
+            }
+        }
+
+        return forest;
     }
 };
