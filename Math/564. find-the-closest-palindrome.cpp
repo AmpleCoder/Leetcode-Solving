@@ -8,6 +8,9 @@
             3) decreasing the first half by 1
 
         among above 5 cases we'll get our result
+
+        follow up
+            try to solve using binary search
 */
 class Solution {
 public:
