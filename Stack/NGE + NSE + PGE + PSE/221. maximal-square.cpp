@@ -76,3 +76,9 @@ public:
         return maxSquareArea;
     }
 };
+
+/*
+    approach 2:
+        using dp: https://leetcode.com/problems/maximal-square/solutions/600149/python-thinking-process-diagrams-dp-approach/
+        kaafi accha smjhaya hei
+*/
