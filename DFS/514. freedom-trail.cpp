@@ -5,6 +5,9 @@
         our solution and relative to it we can figure out the solution for the current index 
         i think that's how we solve most of dfs + dp problem where current solution depends on the prev included 
         solution configuration
+
+    follow up:
+        try to solve it via dijkstra 
 */
 
 class Solution {
